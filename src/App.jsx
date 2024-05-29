@@ -1,51 +1,98 @@
 import React, { useState } from 'react';
-import './App.css';
+import styled from 'styled-components';
+import './App.css'
+
+const Header = styled.div`
+  background-color: white;
+  width: 1200px;
+  border-radius: 10px;
+  margin: 0px 50px 50px 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  margin-bottom: 30px;
+`;
+
+const Btns = styled.div`
+  background-color: white;
+  width: 1200px;
+  border-radius: 10px;
+  margin: 0px 50px 50px 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+`;
+
+const Button = styled.button`
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    background-color: aqua;
+  }
+`;
+
+const SubmitButton = styled(Button)`
+  background-color: antiquewhite;
+`;
+
+const Label = styled.label`
+  margin: 15px;
+`;
 
 function App() {
   return (
     <>
       {/* 헤더 */}
-      <section>
-        <div className='header'>
-          <div>
-            <label>날짜</label>
-            <input type="date" />
-          </div>
-
-          <div>
-            <label>항목</label>
-            <input type="text" placeholder='지출 항목' />
-          </div>
-
-          <div>
-            <label>금액</label>
-            <input type="text" placeholder='지출 금액' />
-          </div>
-
-          <div>
-            <label>내용</label>
-            <input type="text" placeholder='지출 내용' />
-          </div>
-
-          <button className='submit_btn' type="submit">저장</button>
+      <Header>
+        <div>
+          <Label>날짜</Label>
+          <input type="date" />
         </div>
-      </section>
+
+        <div>
+          <Label>항목</Label>
+          <input type="text" placeholder='지출 항목' />
+        </div>
+
+        <div>
+          <Label>금액</Label>
+          <input type="text" placeholder='지출 금액' />
+        </div>
+
+        <div>
+          <Label>내용</Label>
+          <input type="text" placeholder='지출 내용' />
+        </div>
+
+        <SubmitButton type="submit">저장</SubmitButton>
+      </Header>
       {/* 버튼 */}
       <section>
-        <div className='btns'>
-          <button>1월</button>
-          <button>2월</button>
-          <button>3월</button>
-          <button>4월</button>
-          <button>5월</button>
-          <button>6월</button>
-          <button>7월</button>
-          <button>8월</button>
-          <button>9월</button>
-          <button>10월</button>
-          <button>11월</button>
-          <button>12월</button>
-        </div>
+        <Btns>
+          <Button>1월</Button>
+          <Button>2월</Button>
+          <Button>3월</Button>
+          <Button>4월</Button>
+          <Button>5월</Button>
+          <Button>6월</Button>
+          <Button>7월</Button>
+          <Button>8월</Button>
+          <Button>9월</Button>
+          <Button>10월</Button>
+          <Button>11월</Button>
+          <Button>12월</Button>
+        </Btns>
       </section>
 
       <div className='content'></div>
