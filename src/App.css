@@ -1,0 +1,53 @@
+.header {
+  background-color: white;
+  width: 1200px;
+  border-radius: 10px;
+  margin: 0px 50px 50px 300px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.btns {
+  background-color: white;
+  width: 1200px;
+  border-radius: 10px;
+  margin: 0px 50px 50px 300px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: antiquewhite;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit_btn {
+  background-color: antiquewhite
+}
+
+body {
+  background-color: aqua;
+}
+
+button:hover {
+  background-color: aqua;
+}
+
+label {
+  margin: 15px;
+}
